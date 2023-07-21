@@ -1,5 +1,603 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap');
-
 html, body, label {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Archivo', sans-serif;
+}
+
+.m-12 {
+    margin: 3rem;
+    position: relative;
+}
+
+.pb-4 {
+    padding-bottom: 1rem;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.mx-48 {
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+
+.rounded-3xl {
+    border-radius: 1.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.ml-12 {
+    margin-left: 3rem;
+}
+
+.mr-8 {
+    margin-right: 2rem;
+}
+
+.w-7 {
+    width: 1.75rem;
+}
+
+.h-7 {
+    height: 1.75rem;
+}
+
+.text-teal-400 {
+    color: #30cac5;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.ml-1 {
+    margin-left: 0.25rem;
+}
+
+.h-8 {
+    height: 2rem;
+}
+
+.mr-1 {
+    margin-right: 0.25rem;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.h-6 {
+    height: 1.5rem;
+}
+
+.text-gray-400 {
+    color: #EAF3F5;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.bg-teal-400 {
+    background-color: #38a169;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+    box-shadow: black;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+
+#sliderContainer {
+    overflow: hidden;
+    position: relative;
+    width: calc(100% - 60mm);
+}
+
+.flex.items-center.stretch {
+    flex: 0 0 25%;
+    margin-left: 16px;
+    transition: transform 0.3s;
+}
+
+/* Additional styles for the carousel */
+.items-center {
+    align-items: center;
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gap-16 {
+    gap: 4rem;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.z-30 {
+    z-index: 30;
+}
+
+.-translate-y-1\/2 {
+    transform: translateY(-50%);
+}
+
+.text-black {
+    color: #000000;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.text-teal-500 {
+    color: #38a169;
+}
+
+.right-1 {
+    right: 0.25rem;
+}
+
+.m-1 {
+    margin: 0.25rem;
+}
+
+.fill-current {
+    fill: currentColor;
+}
+
+.text-red-400 {
+    color: #f48475;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-teal-400 {
+    color: #38a169;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.w-8 {
+    width: 2rem;
+}
+
+.h-8 {
+    height: 2rem;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.w-6 {
+    width: 1.5rem;
+}
+
+.h-6 {
+    height: 1.5rem;
+}
+
+.mr-2 {
+    margin-right: 0.5rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.w-48 {
+    width: 12rem;
+}
+
+.h-48 {
+    height: 12rem;
+}
+
+.sm {
+    width: 14rem;
+}
+
+.sm {
+    height: 14rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.text-red-400 {
+    color: #f56565;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.text-teal-400 {
+    color: #38a169;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.w-8 {
+    width: 2rem;
+}
+
+.h-8 {
+    height: 2rem;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.w-6 {
+    width: 1.5rem;
+}
+
+.h-6 {
+    height: 1.5rem;
+}
+
+.mr-2 {
+    margin-right: 0.5rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.w-48 {
+    width: 12rem;
+}
+
+.h-48 {
+    height: 12rem;
+}
+
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.text-red-400 {
+    color: #f56565;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.text-teal-400 {
+    color: #38a169;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.w-8 {
+    width: 2rem;
+}
+
+.h-8 {
+    height: 2rem;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.w-6 {
+    width: 1.5rem;
+}
+
+.h-6 {
+    height: 1.5rem;
+}
+
+.mr-2 {
+    margin-right: 0.5rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.w-48 {
+    width: 12rem;
+}
+
+.h-48 {
+    height: 12rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.text-red-400 {
+    color: #f56565;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.text-teal-400 {
+    color: #38a169;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.w-8 {
+    width: 2rem;
+}
+
+.h-8 {
+    height: 2rem;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.w-6 {
+    width: 1.5rem;
+}
+
+.h-6 {
+    height: 1.5rem;
+}
+
+.mr-2 {
+    margin-right: 0.5rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.w-48 {
+    width: 12rem;
+}
+
+.h-48 {
+    height: 12rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.text-red-400 {
+    color: #f56565;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.text-teal-400 {
+    color: #38a169;
+}
+
+
+#prev {
+    left: -1.5rem;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+}
+
+#next {
+    right: -1.5rem;
+    transform: translateY(-50%);
+}
+.circular-button {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); /* Add shadow to the circular button */
 }

@@ -1,3 +1,4 @@
+
 html, body, label {
     font-family: 'Archivo', sans-serif;
 }
@@ -600,4 +601,35 @@ html, body, label {
 }
 .circular-button {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); /* Add shadow to the circular button */
+}
+.focus\:outline-none:focus {
+    outline: none;
+}
+
+.focus\:glow-green:focus {
+    box-shadow: 0 0 0 3px teal;
+}
+.hover-zoom-effect:hover {
+    transform: scale(1.5);
+}
+@keyframes vibrate {
+        0% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(-2px, -2px);
+        }
+        50% {
+            transform: translate(0, 0);
+        }
+        75% {
+            transform: translate(2px, 2px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+.animate-vibrate {
+    animation: vibrate 1s linear ;
+    animation-delay: 0.5s; /* Delay the start of the animation by 5 seconds */
 }

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NeuroDive</title>
+    <!-- <meta name="viewport" content=" width=device-width, initial-scale=0.22, user-scalable=yes, minimum-scale=0, maximum-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/main.css"> -->
+    <link rel="stylesheet" href="./css/output.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+
+<body class="bg-gray-200 ">
+    <header id="header-section">
+        <div class="ml-4 mr-4 mt-2 pb-1 bg-white  lg:mx-48 rounded-3xl">
+            <!-- Logo -->
+                <img src="img/neurodive.png" class="w-50 h-50 rounded-full mx-auto pb-0 md:pb-0 md:w-80 md:h-80 justify-center" alt="logo" id="logo">
+            <!-- Search Bar and Navigations -->
+            <div class="sm:col-span-8 md:col-span-4 sm:pt-4 md:pt-0 md:mt-0 sm:flex sm:justify-center">
+                <div>
+                    <label for="search" class="text-sm font-medium text-gray-900 sr-only">Search</label>
+                    <div class="relative mx-4 sm:mx-8">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                            </svg>
+                        </div>
+                        <input type="search" id="search"
+                            class="w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="Search Book or Author">
+                        <button type="submit" class="text-white hidden">
+                            Search Book or Author
+                        </button>
+                    </div>
+
+                    <div id="navigations"
+                        class="mt-4 pt-4 sm:mt-2 sm:ml-4 sm:flex text-2xl sm:text-base font-semibold mx-auto justify-items-center justify-center">
+                        <div class="responsive sm:flex">
+                            <div
+                                class="flex justify-center text-5xl sm:hidden mb-4 text-pink-400 font-extrabold hover:text-teal-400">
+                                <a href="#" id="sections-link"
+                                    class="focus:none focus:outline-none tooltip">Sections</a>
+                            </div>
+                            <div id="nav-links" class="hidden sm:flex sm:space-x-8">
+                                <div id="bundle-nav" class="mb-4 sm:mr-8 sm:ml-6 justify-items-center">
+                                    <div class="flex justify-center mr-2">
+                                        <a href="#bundles-section"
+                                            class="hover:text-teal-400 focus:none focus:outline-none">Bundles</a>
+                                    </div>
+                                </div>
+                                <div id="ebook-nav" class="mb-4 sm:mr-8 sm:ml-0">
+                                    <div class="flex justify-center mr-2">
+                                        <a href="#ebooks-section"
+                                            class="hover:text-teal-400 focus:none focus:outline-none">E-Book</a>
+                                    </div>
+                                </div>
+                                <div id="guide-nav" class="mb-4 sm:mr-8 sm:ml-0">
+                                    <div class="flex justify-center mr-2">
+                                        <a href="#guides-section"
+                                            class="hover:text-teal-400 focus:none focus:outline-none">Guides</a>
+                                    </div>
+                                </div>
+                                <div id="planner-nav" class="mb-4 sm:mr-8 sm:ml-0">
+                                    <div class="flex justify-center mr-2">
+                                        <a href="#planners-section"
+                                            class="hover:text-teal-400 focus:none focus:outline-none">Planner
+                                            Trackers</a>
+                                    </div>
+                                </div>
+                                <div id="workbook-nav" class="mb-4 sm:mr-8 sm:ml-0">
+                                    <div class="flex justify-center mr-2">
+                                        <a href="#workbooks-section"
+                                            class="hover:text-teal-400 focus:none focus:outline-none">Workbooks</a>
+                                    </div>
+                                </div>
+                                <div id="all-nav" class="mb-4 sm:mr-8 sm:ml-0">
+                                    <div class="flex justify-center mr-2">
+                                        <a href="#header-section"
+                                            class="hover:text-teal-400 focus:none focus:outline-none">All</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex sm:flex justify-center pt-4 font-medium mx-auto sm:pt-4 md:flex">
+                        <div class="flex items-center mt-0 sm:mt-4 sm:pb-8">
+                            <div class="sm:flex-grow"></div>
+                            <!-- Empty flex item to create space between the search bar and buttons -->
+                            <button
+                                class="mx-auto px-6 py-3 font-semibold text-white bg-teal-400 rounded-full focus:outline-none focus:bg-teal-600 hover:shadow-lg hover:scale-105 transition-transform mr-8">
+                                <a href="https://neurodive.co/login/" class="whitespace-nowrap">Sign In</a>
+                            </button>
+                            <button
+                                class="mx-auto px-6 py-3 font-semibold text-teal-400 bg-white rounded-full border border-teal-400 focus:outline-teal-400 focus:border-teal-400 focus:bg-teal-600 hover:shadow-lg hover:scale-105 transition-transform">
+                                <a href="https://neurodive.co/membership-account/membership-levels/"
+                                    class="whitespace-nowrap">Sign Up</a>
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign In / Sign Up Buttons -->
+
+
+
+
+        </div>
+
+    </header>
+    <section class="ml-4 mr-4 mt-2 md:m-8 pb-1 bg-white lg:mx-48 rounded-3xl md:text-left md:flex ">
+        <!-- Left Side -->
+        <div class="relative">
+            <!-- Header -->
+            <div class="flex justify-center mx-2 mb-4">
+                <div class="md:flex justify-center pt-2 mt-2">
+                    <div class="text-4xl font-bold sm:text-6xl mt-4 pt-2 text-center">
+                        GET OUR LATEST PRODUCTS
+                    </div>
+                </div>
+            </div>
+            <!-- Lorem Ipsum Text -->
+            <div class="ml-2 mb-4">
+                <p class="text-base sm:text-lg xl:text-xl md:mb-2 sm:mb-15 mx-4 flex text-center">Lorem ipsum dolor sit
+                    amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua.</p>
+            </div>
+            <!-- Icons Section -->
+            <div class="justify-center mx-4">
+                <!-- Icon 1 -->
+                <div class="flex ml-4 mb-4">
+                    <div class="w-12 h-12 mr-4 ml-4">
+                        <img src="./img/subscriber.png" alt="Icon 1" class="w-full h-full ">
+                    </div>
+                    <p class="mt-4 mr-2 text-xl font-semibold text-teal-400">+3000 Subscriber</p>
+                </div>
+                <!-- Icon 2 -->
+                <div class="flex ml-4">
+                    <div class="w-12 h-12 mr-4 ml-4">
+                        <img src="./img/follower.png" alt="Icon 1" class="w-full h-full ">
+                    </div>
+                    <p class="mt-4 mr-2 text-xl font-semibold text-teal-400">+3000 Follower</p>
+                </div>
+            </div>
+
+            <div class="grid justify-start sm:ml-4 mt-8 sm:flex">
+                <button
+                    class="mx-4 mb-2 px-6 py-3 justify-center font-semibold text-white bg-teal-400 rounded-full focus:outline-none focus:bg-teal-600 hover:shadow-lg hover:scale-105 transition-transform">
+                    <a href="https://neurodive.co/membership-account/membership-levels/">Subscribe</a>
+                </button>
+                <button
+                    class="mx-4 mb-2 px-6 py-3 justify-center font-semibold text-teal-400 bg-white rounded-full border border-teal-400 focus:outline-teal-400 focus:border-teal-400 focus:bg-teal-600 hover:shadow-lg hover:scale-105 transition-transform">
+                    <a href="https://neurodive.co/s/">Get Our Latest Products Now !!</a>
+                </button>
+            </div>
+        </div>
+        <!-- Right Side (Image) -->
+        <div class="sm:w-1/2 mt-4 sm:mt-1">
+            <div class="flex items-center justify-center h-1/2 md:h-full mx-auto">
+                <img src="./img/section1.png" alt="Image" class="w-full h-full md:w-full rounded-2xl">
+            </div>
+        </div>
+
+    </section>
+    <section class="ml-4 mr-4 mt-2 md:m-8 pb-4 bg-white lg:mx-48 rounded-3xl md:text-center" id="bundles-section">
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-4 ml-12 sm:ml-6 md:ml-8">
+            <div class="flex items-center mr-2 pt-4 mt-4">
+                <img src="img/bundle.png" class="w-7 h-7 mr-2" alt="bundles icon">
+                <div class="text-2xl font-bold">
+                    Bundles
+                </div>
+            </div>
+            <a href="https://neurodive.co/product/common-questions-about-love-digital-printable-workbook/"
+                class="flex items-center text-2xl text-teal-400 col-span-2 gap-2 mt-8 mr-6 font-bold focus:text-teal-500 hover:underline">
+                More
+                <!-- Arrow Icon -->
+                <svg class="w-6 h-6 mx-auto ml-1 text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+        <!-- Lorem Ipsum Text -->
+        <p class=" md:flex mb-8 ml-12 mr-1 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+            do eiusmod tempor
+            incididunt
+            ut labore et dolore magna aliqua.</p>
+
+        <div class="flex items-center justify-center w-full">
+            <div class="w-full relative flex items-center justify-center">
+                <button aria-label="slide backward"
+                    class="absolute z-30 left-0 ml-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer"
+                    id="prev">
+                    <svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <!-- Carousel -->
+                <div id="sliderContainer" class="grid grid-cols-1 justify-around md:mx-48 "
+                    ontouchstart="touchStart(event)" ontouchmove="touchMove(event)" ontouchend="touchEnd()"
+                    ontouchcancel="touchEnd()">
+                    <div id="slider" class="flex " style="transition: transform 0.8s;">
+                    </div>
+                </div>
+                <button aria-label="slide forward"
+                    class="absolute z-30 right-0 mr-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                    id="next">
+                    <svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        </div>
+        </div>
+    </section>
+    <section class="ml-4 mr-4 mt-2 md:m-8 pb-4 bg-white lg:mx-48 rounded-3xl md:text-center" id="bundles-section">
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-4 ml-12 sm:ml-6 md:ml-8">
+            <div class="flex items-center mr-2 pt-4 mt-4">
+                <img src="img/ebook.png" class="w-7 h-7 mr-2" alt="bundles icon">
+                <div class="text-2xl font-bold">
+                    E-Books
+                </div>
+            </div>
+            <a href="https://neurodive.co/product/common-questions-about-love-digital-printable-workbook/"
+                class="flex items-center text-2xl text-teal-400 col-span-2 gap-2 mt-8 mr-6 font-bold focus:text-teal-500 hover:underline">
+                More
+                <!-- Arrow Icon -->
+                <svg class="w-6 h-6 mx-auto ml-1 text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+        <!-- Lorem Ipsum Text -->
+        <p class=" md:flex mb-8 ml-12 mr-1 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+            do eiusmod tempor
+            incididunt
+            ut labore et dolore magna aliqua.</p>
+
+        
+
+        </div>
+        </div>
+    </section>
+    
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const sectionsLink = document.getElementById("sections-link");
+            const navLinks = document.getElementById("nav-links");
+            function handleSliderNavigation(sliderContainer) {
+                let defaultTransform = 0;
+                const prevButton = sliderContainer.querySelector(".prev");
+                const nextButton = sliderContainer.querySelector(".next");
+                const slider = sliderContainer.querySelector(".slider");
+                const slideWidth = 398;
+            }
+            sectionsLink.addEventListener("click", function () {
+                navLinks.classList.toggle("hidden");
+            });
+        });
+        const sliderContainers = document.querySelectorAll(".slider-container");
+        sliderContainers.forEach(sliderContainer => {
+            handleSliderNavigation(sliderContainer);
+        });
+        let defaultTransform = 0;
+        function goNext() {
+            defaultTransform = defaultTransform - 398;
+            var slider = document.getElementById("slider");
+            if (Math.abs(defaultTransform) >= slider.scrollWidth / 1.7) defaultTransform = 0;
+            slider.style.transform = "translateX(" + defaultTransform + "px)";
+        }
+        next.addEventListener("click", goNext);
+        function goPrev() {
+            var slider = document.getElementById("slider");
+            if (Math.abs(defaultTransform) === 0) defaultTransform = 0;
+            else defaultTransform = defaultTransform + 398;
+            slider.style.transform = "translateX(" + defaultTransform + "px)";
+        }
+        prev.addEventListener("click", goPrev);
+
+        // // CAROUSEL script
+        let slideWidth = 150; // Width of each carousel slide, adjust as needed
+        let totalSlides = document.querySelectorAll(".flex.items-center.stretch").length;
+        let containerWidth = document.getElementById("sliderContainer").clientWidth;
+        let slidesPerContainer = 4; // Number of slides displayed at a time
+        let currentTranslate = 0;
+        let touchStartX = 0;
+        let touchCurrentX = 0;
+        let isDragging = false;
+
+        const carouselData = [
+            {
+                image: "./img/book.png",
+                stars: 2,
+                title: "Bundle 1",
+                price: {
+                    oldPrice: 50,
+                    promoPrice: 30,
+                },
+            },
+            {
+                image: "./img/book.png",
+                stars: 4,
+                title: "Bundle 2",
+                price: {
+                    oldPrice: 60,
+                    promoPrice: 40,
+                },
+            },
+            {
+                image: "./img/book.png",
+                stars: 5,
+                title: "Bundle 3",
+                price: {
+                    oldPrice: 70,
+                    promoPrice: 50,
+                },
+            },
+            {
+                image: "./img/book.png",
+                stars: 3,
+                title: "Bundle 4",
+                price: {
+                    oldPrice: 100,
+                    promoPrice: 30,
+                },
+
+            },
+            {
+                image: "./img/book.png",
+                stars: 2,
+                title: "Bundle 5",
+                price: {
+                    oldPrice: 50,
+                    promoPrice: 30,
+                },
+            },
+            // add 6 more items here with diffrent data, only the image is the same
+            {
+                image: "./img/book.png",
+                stars: 2,
+                title: "Bundle 6",
+                price: {
+                    oldPrice: 50,
+                    promoPrice: 30,
+                },
+            },
+            {
+                image: "./img/book.png",
+                stars: 2,
+                title: "Bundle 7",
+                price: {
+                    oldPrice: 50,
+                    promoPrice: 30,
+                },
+            },
+            {
+                image: "./img/book.png",
+                stars: 2,
+                title: "Bundle 8",
+                price: {
+                    oldPrice: 50,
+                    promoPrice: 30,
+                },
+            },
+            {
+                image: "./img/book.png",
+                stars: 2,
+                title: "Bundle 9",
+                price: {
+                    oldPrice: 50,
+                    promoPrice: 30,
+                },
+            },
+            {
+                image: "./img/book.png",
+                stars: 2,
+                title: "Bundle 10",
+                price: {
+                    oldPrice: 50,
+                    promoPrice: 30,
+                },
+            },
+            {
+                image: "./img/book.png",
+                stars: 2,
+                title: "Bundle 11",
+                price: {
+                    oldPrice: 50,
+                    promoPrice: 30,
+                },
+            },
+            {
+                image: "./img/book.png",
+                stars: 2,
+                title: "Bundle 12",
+                price: {
+                    oldPrice: 50,
+                    promoPrice: 30,
+                },
+            },
+            // Add more carousel items data as needed
+        ];
+
+        // Function to generate HTML for carousel items
+        function createCarouselItem(data) {
+            const starIcons = getStarIcons(data.stars); // Get the star icons HTML based on the rating
+
+            return `
+            <div class="flex items-center stretch hover:scale-105 transition-transform">
+        <div class="flex flex-col items-center">
+          <div class="mb-8">
+            <img src="${data.image}" alt="bundle" class="md:w-40 md:h-40"/>
+          </div>
+          <div class="flex items-center mb-1">
+            ${starIcons} <!-- Insert the dynamic star icons here -->
+          </div>
+          <div class="flex items-center mb-1 text-lg font-bold">${data.title}</div>
+          <div class="flex items-center mt-1 justify-between mb-2">
+            <span class="text-xl text-red-400 line-through font-extrabold mr-2">$${data.price.oldPrice.toFixed(2)}</span>
+            <span class="text-xl font-bold text-black ml-2">$${data.price.promoPrice.toFixed(2)}</span>
+          </div>
+          <button class="mt-4 px-12 py-2 text-sm mb-4 font-medium text-white bg-teal-400 rounded-full focus:outline-none focus:bg-teal-600">
+            Learn More
+          </button>
+        </div>
+      </div>`;
+        }
+        // Helper function to generate star icons based on rating
+        function getStarIcons(starCount) {
+            const filledStar = '<img src="./img/star-filled.png" class="w-4 h-4 mr-1"/>'; // Use the filled star image
+            const emptyStar = '<img src="./img/star-empty.png" class="w-4 h-4 mr-1"/>'; // Use the empty star image
+            return filledStar.repeat(starCount) + emptyStar.repeat(5 - starCount);
+        }
+
+
+        // Helper function to generate star icons based on rating
+        function getStarIcons(starCount) {
+            const filledStar = '<img src="./img/star-filled.png" class="w-4 h-4 mr-1 filled"/>';
+            const emptyStar = '<img src="./img/star-empty.png" class="w-4 h-4 mr-1"/>';
+            return filledStar.repeat(starCount) + emptyStar.repeat(5 - starCount);
+        }
+
+        // Function to populate the carousel with data
+        function populateCarousel(data) {
+            const sliderContainer = document.getElementById('slider');
+            sliderContainer.innerHTML = data.map(createCarouselItem).join('');
+        }
+
+
+        // Call the populateCarousel function with the carouselData array
+        populateCarousel(carouselData);
+        const sliderContainer = document.getElementById("slider");
+        let startX = 0;
+        currentTranslate = 0;
+        let prevTranslate = 0;
+        // ...
+        document.addEventListener("touchstart", touchStart);
+        document.addEventListener("touchmove", touchMove);
+        document.addEventListener("touchend", touchEnd);
+        document.addEventListener("touchcancel", touchEnd);
+
+        function touchStart(event) {
+            touchStartX = event.touches[0].clientX;
+            touchCurrentX = touchStartX;
+            event.preventDefault();
+        }
+
+        function touchMove(event) {
+            touchCurrentX = event.touches[0].clientX;
+            event.preventDefault();
+
+        }
+
+        function touchEnd() {
+            const diffX = touchCurrentX - touchStartX;
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    goPrev();
+                } else {
+                    goNext();
+                }
+            }
+        }
+        function handleClick(event) {
+            event.preventDefault();
+            event.target.classList.add("text-green-500", "underline");
+            setTimeout(() => {
+                event.target.classList.remove("text-green-500", "underline");
+                window.location.href = event.target.href;
+            }, 500); // Adjust the timeout (in milliseconds) to control how long the text stays green, underlined, and glowing
+            // You can set the timeout value to 0 if you want the effects to change back immediately after the click event.
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const navigationLinks = document.querySelectorAll("#navigations a");
+
+            navigationLinks.forEach((link) => {
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+
+                    const targetSectionId = link.getAttribute("href");
+                    const targetSection = document.querySelector(targetSectionId);
+
+                    if (targetSection) {
+                        const offset = 60; // Adjust this value to control the scroll offset from the top
+                        const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - offset;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
